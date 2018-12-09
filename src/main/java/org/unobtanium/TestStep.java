@@ -38,7 +38,7 @@ public abstract class TestStep {
     this.stepContext = stepContext;
   }
 
-  abstract void execute() throws StepFailureException;
+  public abstract void execute() throws StepFailureException;
 
   void preExecute() {
 

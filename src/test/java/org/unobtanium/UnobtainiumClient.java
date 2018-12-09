@@ -53,7 +53,7 @@ public class UnobtainiumClient {
   private static class PassAndSaveInjectStep extends TestStep {
 
     @Override
-    void execute() throws StepFailureException {
+    public void execute() throws StepFailureException {
       getGlobalContext().set("key", 100);
       getScenarioContext().set("key", 100);
       getStepContext().set("key", 100);
@@ -72,7 +72,7 @@ public class UnobtainiumClient {
     private String home;
 
     @Override
-    void execute() throws StepFailureException {
+    public void execute() throws StepFailureException {
 
     }
 
@@ -93,7 +93,7 @@ public class UnobtainiumClient {
     }
 
     @Override
-    void execute() throws StepFailureException {
+    public void execute() throws StepFailureException {
       InputStream source = this.getClass().getClassLoader().getResourceAsStream(name);
       if (source == null) {
         throw new StepFailureException("Cannot find property file with name: " + name + " in classpath");
